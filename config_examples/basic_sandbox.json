@@ -1,0 +1,34 @@
+{
+  "version": "0.6.0-alpha",
+  "process": {
+    "commandLine": "python -c \"print('Hello from MXC sandbox!')\"",
+    "cwd": "/tmp"
+  },
+  "filesystem": {
+    "readonlyPaths": [
+      "/usr/bin",
+      "/usr/lib",
+      "/bin",
+      "/lib",
+      "/opt"
+    ],
+    "readwritePaths": [
+      "/tmp",
+      "/var/tmp"
+    ],
+    "deniedPaths": []
+  },
+  "network": {
+    "allowOutbound": false,
+    "proxy": null,
+    "allowedHosts": [],
+    "blockedHosts": []
+  },
+  "ui": {
+    "clipboard": "deny",
+    "display": "deny",
+    "gui": "deny"
+  },
+  "timeoutMs": 30000,
+  "experimental": false
+}
