@@ -1,0 +1,38 @@
+{
+  "version": "0.7.0-dev",
+  "process": {
+    "commandLine": "python -c \"print('Stateful session ready')\"",
+    "cwd": "/tmp"
+  },
+  "filesystem": {
+    "readonlyPaths": [
+      "/usr/bin",
+      "/usr/lib",
+      "/bin",
+      "/lib",
+      "/home/user/.local"
+    ],
+    "readwritePaths": [
+      "/tmp/sandbox",
+      "/home/user/sandbox_data"
+    ],
+    "deniedPaths": [
+      "/etc",
+      "/var/lib",
+      "/root"
+    ]
+  },
+  "network": {
+    "allowOutbound": false,
+    "proxy": "http://proxy.corp.com:8080",
+    "allowedHosts": [],
+    "blockedHosts": []
+  },
+  "ui": {
+    "clipboard": "deny",
+    "display": "deny",
+    "gui": "deny"
+  },
+  "timeoutMs": 300000,
+  "experimental": true
+}
