@@ -1,0 +1,32 @@
+{
+  "version": "0.6.0-alpha",
+  "process": {
+    "commandLine": "curl -s https://api.github.com || echo 'Network blocked'",
+    "cwd": "/tmp"
+  },
+  "filesystem": {
+    "readonlyPaths": [
+      "/usr/bin",
+      "/usr/lib",
+      "/bin",
+      "/lib"
+    ],
+    "readwritePaths": [
+      "/tmp"
+    ],
+    "deniedPaths": []
+  },
+  "network": {
+    "allowOutbound": true,
+    "proxy": null,
+    "allowedHosts": ["api.github.com", "*.microsoft.com"],
+    "blockedHosts": ["*.local", "192.168.*"]
+  },
+  "ui": {
+    "clipboard": "allow",
+    "display": "deny",
+    "gui": "deny"
+  },
+  "timeoutMs": 60000,
+  "experimental": false
+}
